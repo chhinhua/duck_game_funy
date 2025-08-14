@@ -25,141 +25,141 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
       color:var(--text);
       background:
-        radial-gradient(1200px 600px at -10% -20%, #1e293b 0%, transparent 60%),
-        radial-gradient(1000px 600px at 110% 120%, #1e293b 0%, transparent 60%),
+        radial-gradient(75rem 37.5rem at -10% -20%, #1e293b 0%, transparent 60%),
+        radial-gradient(62.5rem 37.5rem at 110% 120%, #1e293b 0%, transparent 60%),
         linear-gradient(180deg, #0b1225, var(--bg));
-      display:flex; flex-direction:column; gap:14px; padding:12px;
+      display:flex; flex-direction:column; gap:.875rem; padding:.75rem;
     }
 
     /* Header */
     .header{
-      display:flex; gap:12px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+      display:flex; gap:.75rem; align-items:center; justify-content:space-between; flex-wrap:wrap;
     }
     .title{
-      display:flex; gap:10px; align-items:center;
-      padding:10px 14px; border-radius:16px;
+      display:flex; gap:.625rem; align-items:center;
+      padding:.625rem .875rem; border-radius:1rem;
       background:linear-gradient(135deg,#0b1225,#0b1225 60%, #0f1a33);
-      box-shadow: 0 10px 30px #0006 inset, 0 1px 0 #ffffff10;
+      box-shadow: 0 .625rem 1.875rem #0006 inset, 0 .0625rem 0 #ffffff10;
     }
-    .title h1{font-size:20px; line-height:1.2; margin:0}
+    .title h1{font-size:1.25rem; line-height:1.2; margin:0}
     .badge{
-      padding:2px 10px; border-radius:999px; font-weight:600; font-size:12px;
+      padding:.125rem .625rem; border-radius:62.4375rem; font-weight:600; font-size:.75rem;
       background:linear-gradient(90deg,var(--accent),var(--accent-2));
       color:#002b36;
     }
 
     /* Layout grid */
     .layout{
-      display:grid; gap:12px;
-      grid-template-columns: 1fr minmax(260px, 340px);
+      display:grid; gap:.75rem;
+      grid-template-columns: 1fr minmax(16.25rem, 21.25rem);
     }
-    @media (max-width: 900px){
+    @media (max-width: 56.25rem){
       .layout{grid-template-columns: 1fr}
     }
 
     /* Control panel */
     .panel{
       background:linear-gradient(180deg,#0b1225,#0e152b);
-      border:1px solid #ffffff10;
-      border-radius:18px; padding:12px;
-      box-shadow: 0 10px 30px #0005;
-      display:flex; flex-wrap:wrap; align-items:center; gap:10px;
+      border:.0625rem solid #ffffff10;
+      border-radius:1.125rem; padding:.75rem;
+      box-shadow: 0 .625rem 1.875rem #0005;
+      display:flex; flex-wrap:wrap; align-items:center; gap:.625rem;
     }
     .btn{
       appearance:none; border:none; cursor:pointer; user-select:none;
-      font-weight:700; letter-spacing:.2px;
-      padding:10px 14px; border-radius:12px; transition:.2s transform, .2s filter, .2s opacity;
-      background:#182036; color:var(--text); border:1px solid #ffffff0f;
+      font-weight:700; letter-spacing:.0125rem;
+      padding:.625rem .875rem; border-radius:.75rem; transition:.2s transform, .2s filter, .2s opacity;
+      background:#182036; color:var(--text); border:.0625rem solid #ffffff0f;
     }
     .btn:hover{filter:brightness(1.1)}
-    .btn:active{transform:translateY(1px) scale(.99)}
+    .btn:active{transform:translateY(.0625rem) scale(.99)}
     .btn[disabled]{opacity:.55; cursor:not-allowed}
     .btn.start{background:linear-gradient(90deg,#0ea5e9,#22d3ee); color:#072b35}
     .btn.pause{background:linear-gradient(90deg,#f59e0b,#fbbf24); color:#3a2200}
     .btn.reset{background:linear-gradient(90deg,#fb7185,#f43f5e); color:#3a0010}
-    .meta{margin-left:auto; display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+    .meta{margin-left:auto; display:flex; align-items:center; gap:.625rem; flex-wrap:wrap}
     .chip{
-      border:1px solid #ffffff15; background:#10172a; padding:8px 10px; border-radius:12px; color:var(--muted); font-size:12px;
+      border:.0625rem solid #ffffff15; background:#10172a; padding:.5rem .625rem; border-radius:.75rem; color:var(--muted); font-size:.75rem;
     }
 
     /* Tracks */
     .race-card{
       background:linear-gradient(180deg,#0b1225,#0b1225 55%,#0e1630);
-      border:1px solid #ffffff10; border-radius:18px; padding:10px 10px 14px;
-      box-shadow: 0 10px 30px #0007;
+      border:.0625rem solid #ffffff10; border-radius:1.125rem; padding:.625rem .625rem .875rem;
+      box-shadow: 0 .625rem 1.875rem #0007;
     }
     .race-header{
-      display:flex; align-items:center; justify-content:space-between; gap:10px; padding:6px 2px 12px;
+      display:flex; align-items:center; justify-content:space-between; gap:.625rem; padding:.375rem .125rem .75rem;
     }
-    .race-header h2{margin:0; font-size:16px; color:#cbd5e1}
+    .race-header h2{margin:0; font-size:1rem; color:#cbd5e1}
     .race-area{
-      position:relative; width:100%; overflow:auto; padding:10px;
-      border-radius:12px; background:linear-gradient(180deg,#0c1227,#0f162e);
-      border:1px dashed #ffffff14;
+      position:relative; width:100%; overflow:auto; padding:.625rem;
+      border-radius:.75rem; background:linear-gradient(180deg,#0c1227,#0f162e);
+      border:.0625rem dashed #ffffff14;
       max-height:68vh;
     }
     .track{
-      position:relative; height:40px; margin:8px 0; background:linear-gradient(90deg,#0f1a33,#0f1a33);
-      border:1px solid #ffffff0a; border-radius:999px; overflow:hidden;
+      position:relative; height:2.5rem; margin:.5rem 0; background:linear-gradient(90deg,#0f1a33,#0f1a33);
+      border:.0625rem solid #ffffff0a; border-radius:62.4375rem; overflow:hidden;
     }
     .lane-bg{
       position:absolute; inset:0; background:
-        repeating-linear-gradient(90deg, transparent 0 18px, #ffffff06 18px 19px);
+        repeating-linear-gradient(90deg, transparent 0 1.125rem, #ffffff06 1.125rem 1.1875rem);
       opacity:.25; pointer-events:none;
     }
     .finish-line{
-      position:absolute; top:0; right:80px; width:4px; height:100%;
+      position:absolute; top:0; right:5rem; width:.25rem; height:100%;
       background: repeating-linear-gradient(
-        0deg, var(--finish) 0 6px, #0000 6px 12px
+        0deg, var(--finish) 0 .375rem, #0000 .375rem .75rem
       );
-      box-shadow: -6px 0 12px #fde04730;
+      box-shadow: -0.375rem 0 .75rem #fde04730;
     }
     .duck{
       position:absolute; top:50%; transform:translateY(-50%);
-      left:10px; display:flex; align-items:center; gap:10px;
-      padding:6px 10px; border-radius:999px; font-weight:800;
-      background:linear-gradient(90deg,#111827,#0b1225); border:1px solid #ffffff18;
-      box-shadow: 0 8px 20px #0008;
+      left:.625rem; display:flex; align-items:center; gap:.625rem;
+      padding:.375rem .625rem; border-radius:62.4375rem; font-weight:800;
+      background:linear-gradient(90deg,#111827,#0b1225); border:.0625rem solid #ffffff18;
+      box-shadow: 0 .5rem 1.25rem #0008;
       white-space:nowrap;
     }
-    .duck .emoji{font-size:20px}
+    .duck .emoji{font-size:1.25rem}
     .tag{
-      font-size:12px; color:#cbd5e1; opacity:.85; background:#0b1020; padding:2px 8px; border-radius:999px; border:1px solid #ffffff12;
+      font-size:.75rem; color:#cbd5e1; opacity:.85; background:#0b1020; padding:.125rem .5rem; border-radius:62.4375rem; border:.0625rem solid #ffffff12;
     }
     .rank-badge{
-      position:absolute; right:-38px; top:50%; transform:translateY(-50%);
-      font-weight:900; font-size:13px; color:#0b0f1a;
+      position:absolute; right:-2.375rem; top:50%; transform:translateY(-50%);
+      font-weight:900; font-size:.8125rem; color:#0b0f1a;
       background:linear-gradient(90deg,#34d399,#10b981);
-      border:1px solid #ffffff60; border-radius:999px; padding:4px 8px;
+      border:.0625rem solid #ffffff60; border-radius:62.4375rem; padding:.25rem .5rem;
       display:none;
     }
     .duck.finished .rank-badge{display:block}
-    .duck.top1{outline:2px solid #fbbf24; box-shadow:0 0 0 3px #fbbf2430, 0 10px 24px #fbbf2433}
-    .duck.top2{outline:2px solid #cbd5e1}
-    .duck.top3{outline:2px solid #f59e0b55}
+    .duck.top1{outline:.125rem solid #fbbf24; box-shadow:0 0 0 .1875rem #fbbf2430, 0 .625rem 1.5rem #fbbf2433}
+    .duck.top2{outline:.125rem solid #cbd5e1}
+    .duck.top3{outline:.125rem solid #f59e0b55}
 
     /* Sidebar: Mission */
     .sidebar{
       background:linear-gradient(180deg,#0b1225,#0e152b);
-      border:1px solid #ffffff10; border-radius:18px; padding:12px;
-      box-shadow: 0 10px 30px #0007;
-      display:flex; flex-direction:column; gap:10px;
+      border:.0625rem solid #ffffff10; border-radius:1.125rem; padding:.75rem;
+      box-shadow: 0 .625rem 1.875rem #0007;
+      display:flex; flex-direction:column; gap:.625rem;
     }
-    .sidebar h3{margin:0; font-size:16px}
+    .sidebar h3{margin:0; font-size:1rem}
     .mission{
-      background:#0a1122; border:1px solid #ffffff10; border-radius:12px; padding:10px; color:#cbd5e1; line-height:1.5; font-size:14px;
+      background:#0a1122; border:.0625rem solid #ffffff10; border-radius:.75rem; padding:.625rem; color:#cbd5e1; line-height:1.5; font-size:.875rem;
     }
-    .mission ul{margin:8px 0 0 18px}
+    .mission ul{margin:.5rem 0 0 1.125rem}
     .note{
-      font-size:12px; color:var(--muted); margin-top:4px
+      font-size:.75rem; color:var(--muted); margin-top:.25rem
     }
 
     /* Results table */
     .results{
-      margin-top:10px; border:1px solid #ffffff12; border-radius:12px; overflow:hidden
+      margin-top:.625rem; border:.0625rem solid #ffffff12; border-radius:.75rem; overflow:hidden
     }
-    .results table{width:100%; border-collapse:collapse; font-size:13px}
-    .results th,.results td{padding:8px 10px; text-align:left; border-bottom:1px solid #ffffff0d}
+    .results table{width:100%; border-collapse:collapse; font-size:.8125rem}
+    .results th,.results td{padding:.5rem .625rem; text-align:left; border-bottom:.0625rem solid #ffffff0d}
     .results th{background:#0f1a33; color:#cbd5e1; position:sticky; top:0}
     .results tbody tr:nth-child(odd){background:#0b1225}
     .results tbody tr:nth-child(even){background:#0d1427}
@@ -167,33 +167,33 @@
     /* Modal podium */
     .modal{
       position:fixed; inset:0; display:none; align-items:center; justify-content:center;
-      background:#0009; backdrop-filter: blur(3px); z-index:50;
+      background:#0009; backdrop-filter: blur(.1875rem); z-index:50;
     }
     .modal.show{display:flex}
     .modal-card{
-      width:min(680px,92vw); border-radius:20px; padding:16px;
+      width:min(42.5rem,92vw); border-radius:1.25rem; padding:1rem;
       background:linear-gradient(180deg,#0b1225,#0e152b);
-      border:1px solid #ffffff18; box-shadow:0 20px 60px #000c;
+      border:.0625rem solid #ffffff18; box-shadow:0 1.25rem 3.75rem #000c;
     }
-    .modal-header{display:flex; align-items:center; gap:10px; justify-content:space-between; padding-bottom:8px}
-    .close{background:#10172a; border:1px solid #ffffff20; color:#cbd5e1}
+    .modal-header{display:flex; align-items:center; gap:.625rem; justify-content:space-between; padding-bottom:.5rem}
+    .close{background:#10172a; border:.0625rem solid #ffffff20; color:#cbd5e1}
     .podium{
-      display:grid; grid-template-columns: repeat(3,1fr); gap:10px; margin-top:10px; align-items:end;
+      display:grid; grid-template-columns: repeat(3,1fr); gap:.625rem; margin-top:.625rem; align-items:end;
     }
     .podium .step{
-      text-align:center; border-radius:16px; padding:12px 8px;
-      background:linear-gradient(180deg,#0b1225,#0d1630); border:1px solid #ffffff18;
+      text-align:center; border-radius:1rem; padding:.75rem .5rem;
+      background:linear-gradient(180deg,#0b1225,#0d1630); border:.0625rem solid #ffffff18;
     }
-    .step h4{margin:6px 0 2px}
-    .gold{box-shadow:0 0 0 2px #fbbf24; }
-    .silver{box-shadow:0 0 0 2px #cbd5e1; }
-    .bronze{box-shadow:0 0 0 2px #f59e0b; }
-    .step .medal{font-size:24px; display:block}
-    .step .pid{font-size:12px; color:#a5b4fc}
-    .step .time{font-size:12px; color:#93c5fd}
+    .step h4{margin:.375rem 0 .125rem}
+    .gold{box-shadow:0 0 0 .125rem #fbbf24; }
+    .silver{box-shadow:0 0 0 .125rem #cbd5e1; }
+    .bronze{box-shadow:0 0 0 .125rem #f59e0b; }
+    .step .medal{font-size:1.5rem; display:block}
+    .step .pid{font-size:.75rem; color:#a5b4fc}
+    .step .time{font-size:.75rem; color:#93c5fd}
 
     /* Toast / live region */
-    .sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+    .sr{position:absolute; width:.0625rem; height:.0625rem; overflow:hidden; clip:rect(0 0 0 0)}
   </style>
 </head>
 <body>
@@ -228,7 +228,7 @@
       <div class="results" aria-live="polite">
         <table>
           <thead>
-            <tr><th style="width:70px">Vị trí</th><th style="width:90px">ID</th><th>Ghi chú</th><th style="width:120px">Thời gian</th></tr>
+            <tr><th style="width:4.375rem">Vị trí</th><th style="width:5.625rem">ID</th><th>Ghi chú</th><th style="width:7.5rem">Thời gian</th></tr>
           </thead>
           <tbody id="resultsBody"><tr><td colspan="4" style="text-align:center;color:#94a3b8">Chưa có kết quả. Hãy bắt đầu cuộc đua!</td></tr></tbody>
         </table>
@@ -264,7 +264,7 @@
     <div class="modal-card">
       <div class="modal-header">
         <h3 id="podiumTitle">🏆 TOP 3 người thắng cuộc</h3>
-        <div style="display:flex; gap:8px">
+        <div style="display:flex; gap:.5rem">
           <button id="btnAgain" class="btn start">🔁 Chạy lại ngay</button>
           <button id="btnClose" class="btn close">Đóng</button>
         </div>
@@ -276,7 +276,7 @@
           <div class="pid">ID: –</div>
           <div class="time">– s</div>
         </div>
-        <div class="step gold" id="podium1" style="transform:translateY(-10px)">
+        <div class="step gold" id="podium1" style="transform:translateY(-0.625rem)">
           <span class="medal">🥇</span>
           <h4>Hạng 1</h4>
           <div class="pid">ID: –</div>
@@ -289,7 +289,7 @@
           <div class="time">– s</div>
         </div>
       </div>
-      <div class="note" style="margin-top:10px">Mẹo: Nhấn <b>R</b> để đặt lại & chạy lượt mới.</div>
+      <div class="note" style="margin-top:.625rem">Mẹo: Nhấn <b>R</b> để đặt lại & chạy lượt mới.</div>
     </div>
   </div>
 
@@ -299,7 +299,7 @@
   <script>
   (function(){
     const NUM_PLAYERS = 20;
-    const EMOJIS = ["🦆","🐥","🐤","🪿"];
+    const EMOJIS = ["🦆","🐥","🐤","🪿","🐣", "🐷", "🐖", "🐽"];
     const raceArea = document.getElementById('raceArea');
     const resultsBody = document.getElementById('resultsBody');
     const btnStart = document.getElementById('btnStart');
@@ -334,14 +334,17 @@
     const DUCK_NAMES = [
     "Vịt Dạ Cày",
     "Vịt Overthinking",
-    "Vịt Bay Cao",
+    "Heo hay vịt?🫡",
+    "Vịt thì phải?🫠",
+    "Heo thì phải?😏",
+    "Heo mà!🤣",
     "Vịt Lười Biếng",
     "Vịt Tốc Hành",
     "Vịt Thích Ngủ",
     "Vịt Siêu Tốc",
-    "Vịt Ngáo Ngơ",
-    "Vịt Siêu Hua Cute",  // bắt buộc có
-    "Vịt Chhin Hua Cutoe", // bắt buộc có
+    "Heo Ngáo Ngơ",
+    "Dợ Siêu Hua Cutee🥰",  // bắt buộc có
+    "Chồnggg Chhin Hua Cutoee😁", // bắt buộc có
     "Vịt Đẹp Trai",
     "Vịt Dễ Thương",
     "Vịt Ham Ăn",
@@ -383,7 +386,7 @@
 
         const duck = document.createElement('div');
         duck.className = 'duck';
-        duck.style.left = '10px';
+        duck.style.left = '.625rem';
 
         const emoji = document.createElement('span');
         emoji.className = 'emoji';
@@ -422,7 +425,7 @@
     // ---------- Race logic ----------
     function maxDistance(){
       const containerWidth = raceArea.clientWidth || raceArea.getBoundingClientRect().width;
-      // right finish line is at right:80px; duck width ~ 72px; margin
+      // right finish line is at right:5rem; duck width ~ 4.5rem; margin
       const safety = 80 + 72 + 20;
       return Math.max(120, containerWidth - safety);
     }
