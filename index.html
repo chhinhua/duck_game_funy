@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title> Đua Vịt – 20 người chơi | HTML 1 file</title>
+  <title> Đua Vịt – 10 người chơi | HTML 1 file</title>
   <style>
     :root{
-      --bg: #0f172a;          /* slate-900 */
+      --bg: #97aee1;          /* slate-900 */
       --card:#111827ee;       /* gray-900 alpha */
       --muted:#94a3b8;        /* slate-400 */
       --text:#e5e7eb;         /* gray-200 */
@@ -200,7 +200,7 @@
   <div class="header">
     <div class="title">
       <span class="badge">HTML 1 file</span>
-      <h1>🐤 Đua Vịt – 20 người chơi</h1>
+      <h1>🐤 Đua Vịt – 10 người chơi</h1>
     </div>
     <div class="panel" role="group" aria-label="Race controls">
       <button id="btnStart" class="btn start">▶️ Bắt đầu cuộc đua (Space)</button>
@@ -208,7 +208,7 @@
       <button id="btnReset" class="btn reset">♻️ Đặt lại (R)</button>
       <div class="meta">
         <span class="chip">⏱️ Thời gian: <strong id="time">0.00s</strong></span>
-        <span class="chip">🏁 Về đích: <strong id="finishedCount">0/20</strong></span>
+        <span class="chip">🏁 Về đích: <strong id="finishedCount">0/10</strong></span>
       </div>
     </div>
   </div>
@@ -298,7 +298,7 @@
 
   <script>
   (function(){
-    const NUM_PLAYERS = 20;
+    const NUM_PLAYERS = 10;
     const EMOJIS = ["🦆","🐥","🐤","🪿","🐣", "🐷", "🐖", "🐽"];
     const raceArea = document.getElementById('raceArea');
     const resultsBody = document.getElementById('resultsBody');
@@ -336,25 +336,12 @@
     "Vịt Overthinking",
     "Heo hay vịt?🫡",
     "Vịt thì phải?🫠",
+    "Dợ Siêu Hua Cutee🥰",  // bắt buộc có
     "Heo thì phải?😏",
     "Heo mà!🤣",
-    "Vịt Lười Biếng",
-    "Vịt Tốc Hành",
-    "Vịt Thích Ngủ",
-    "Vịt Siêu Tốc",
-    "Heo Ngáo Ngơ",
-    "Dợ Siêu Hua Cutee🥰",  // bắt buộc có
     "Chồnggg Chhin Hua Cutoee😁", // bắt buộc có
-    "Vịt Đẹp Trai",
-    "Vịt Dễ Thương",
-    "Vịt Ham Ăn",
-    "Vịt Thích Đi Chơi",
-    "Vịt Cười Tươi",
-    "Vịt Hài Hước",
-    "Vịt Nghiêm Túc",
-    "Vịt Tinh Nghịch",
-    "Vịt Hơi Lầy",
-    "Vịt Siêu Nhây"
+    "Vịt Thích Ngủ",
+    "Heo Ngáo Ngơ",
     ];
 
     // ---------- Build tracks ----------
