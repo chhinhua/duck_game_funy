@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title> Đua Vịt – 20 người chơi | HTML 1 file</title>
@@ -478,6 +477,7 @@
       const elapsed = startTs ? (tNow - startTs - pauseAccum) / 1000 : 0;
       timeEl.textContent = fmt(elapsed);
 
+      const speedFactor = window.innerWidth <= 768 ? 0.5 : 1.6; // mobile chậm hơn
       // Move each duck
       const allFinished = finishOrder.length === NUM_PLAYERS;
       if (!allFinished){
@@ -486,7 +486,7 @@
           // small per-frame jitter
           const burst = (Math.sin(tNow/200 + d.id) + 1) * 0.25; // 0..0.5
           const randomness = rand(0.4, 1.0);
-          const delta = (d.vx * randomness + burst) * 1.6; // tune here for pace
+          const delta = (d.vx * randomness + burst) * speedFactor; // tune here for pace
           d.x = Math.min(d.x + delta, 10 + md);
           d.el.style.left = d.x + 'px';
           if (d.x >= 10 + md){
